@@ -1,0 +1,87 @@
+body{
+  background-image: url('http://1.bp.blogspot.com/-Ll--s--QglY/UhVtTY65kVI/AAAAAAAAGsg/InAmM-jLH8w/s1600/carnival+sign+blank.jpg');
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+
+
+header img {
+  margin: 0 auto;
+  margin-left: 23%;
+}
+
+.main{
+  height: 500px;
+  width: 60%;
+  margin-left: 25%;
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+.pic img{
+  border-radius: 100;
+}
+
+#felix{
+  position: absolute;
+}
+
+.pic{
+  width: 100px;
+  height: 100px;
+}
+.card{
+  height: 25%;
+  width: 20%;
+  background-color: black;
+  color: white;
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  cursor : pointer;
+          transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+          transition: 0.3s;
+    -webkit-transition: 0.3s;
+}
+.card .face {
+          backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    
+    z-index: 2;
+    text-align: center;
+    line-height: 200px;
+}
+
+.card.flipped, .card.flipped2 {
+          transform: rotatex(180deg);
+      -ms-transform: rotatex(180deg);
+    -webkit-transform: rotatex(180deg);
+}
+
+
+.card .front {
+
+    position: absolute;
+    z-index: 1;
+}
+
+.card .back {
+          transform: rotatex(-180deg);
+      -ms-transform: rotatex(-180deg);
+    -webkit-transform: rotatex(-180deg);
+}
+
+.card img {
+  display: block;
+  height: 100%;
+  width: 100%;
+
+}
+
+audio {
+  display: none;
+}

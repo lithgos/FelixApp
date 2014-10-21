@@ -1,0 +1,41 @@
+<html ng-app="hackathonApp">
+<head>
+  <title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-animate.js"></script>
+  <script src='lib/angular.audio.js'></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+  <script src="js/app.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body ng-controller="HackController">
+
+<ul>
+  <li ng-click="findFelix()"><a href="#">Find Felix</a></li>
+  <li ng-click="whackFelix()"><a href="#">Whack Felix</a></li>
+</ul>
+
+<section ng-hide="showFelix" >
+  <div>
+    <div class="main">
+        <div class="card" ng-class="{'flipped': correctCards.indexOf(card.text)  >  -1 , 'flipped2': flippedCards.indexOf(card)  >  -1}" ng-repeat="card in cards|orderBy:random" ng-click="checkCards(card)" >
+      <div class="face front"></div> 
+      <div class="face back "> <img ng-src="{{card.image}}"> </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section ng-show="showFelix">
+<div ng-hide="whackIt">
+<div id="felix" class="pic"><img ng-click="hitFelix()" src="img/Felix.jpg" height="200px" width="200px"/></div>
+</div>
+<audio controls autoplay>
+  <source src="audio/bennyhill.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+</section>
+
+
+</body>
+</html>
